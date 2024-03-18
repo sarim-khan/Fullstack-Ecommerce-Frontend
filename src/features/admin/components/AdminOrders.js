@@ -129,11 +129,13 @@ function AdminOrders() {
                           <div className="mr-2">
                             <img
                               className="w-6 h-6 rounded-full"
-                              src={item.thumbnail}
+                              src={item?.thumbnail}
+                              alt={item?.product?.title}
                             />
                           </div>
                           <span>
-                            {item.title} - #{item.quantity} - $
+                            {console.log(item)}
+                            {item?.title} - #{item?.quantity} - $
                             {discountedPrice(item)}
                           </span>
                         </div>
